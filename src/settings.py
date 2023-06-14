@@ -5,25 +5,25 @@ from dataset_tools.templates import AnnotationType, CVTask, Industry, License
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: Optional[str] = None
+PROJECT_NAME: str = "KFuji RGB-DS"
+PROJECT_NAME_FULL: Optional[str] = "KFuji RGB-DS"
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-INDUSTRIES: List[Industry] = None
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+LICENSE: License = License.CC_BY_4_0()
+INDUSTRIES: List[Industry] = [Industry.Agriculture()]
+CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
-RELEASE_YEAR: int = None
-HOMEPAGE_URL: str = None
+RELEASE_YEAR: int = 2020
+HOMEPAGE_URL: str = "https://zenodo.org/record/3715991#.YguSZnVBzmg"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = None
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/kfuji"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
