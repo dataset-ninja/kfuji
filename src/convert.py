@@ -8,7 +8,7 @@ from supervisely.io.fs import file_exists, get_file_name
 def convert_and_upload_supervisely_project(
     api: sly.Api, workspace_id: int, project_name: str
 ) -> sly.ProjectInfo:
-    dataset_path = "/home/alex/DATASETS/TODO/KFuji/KFuji_RGB-DS_dataset/preprocessed data"
+    dataset_path = "/home/iwatkot/supervisely/ninja-datasets/kfuji/preprocessed data"
     images_folder_name = "images"
     anns_folder = "square_annotations1"
     images_ext = "hr.jpg"
