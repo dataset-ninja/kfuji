@@ -6,4 +6,4 @@ Each image in the KFuji RGB-DS dataset has pixel-level instance segmentation ann
 
 Here is the visualized example grid with annotations:
 
-<img src="https://github.com/dataset-ninja/kfuji/raw/main/visualizations/horizontal_grid.png">
+[Dataset classes](https://github.com/dataset-ninja/kfuji/raw/main/visualizations/horizontal_grid.webm)
