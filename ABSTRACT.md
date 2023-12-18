@@ -12,11 +12,11 @@ The images, sized at 548 x 373 pixels, are saved in three different modalities:
 
 The S and D data undergo normalization between 0 and 255, similar to RGB images, to achieve comparable mean and variance between channels, facilitating faster learning convergence for machine learning algorithms, including deep convolutional neural networks.
 
-### Data Annotation
+## Data Annotation
 
 All images are manually annotated with rectangular bounding boxes, identifying a total of 12,839 apples across the dataset. The data acquisition occurred in a commercial Fuji apple orchard, utilizing two Microsoft Kinect v2 RGB-D sensors. The acquisition took place three weeks before harvesting, ensuring apples were at the 85 BBCH growth stage. Due to the depth sensor's sensitivity to direct sunlight, data acquisition occurred at night with artificial lighting.
 
-### Data Processing
+## Data Processing
 
 Data preprocessing involved various steps, including range correction of IR intensity data, projection of 3D point clouds onto the camera focal plane, geometric wrapping, registration with high-resolution RGB images, and image splitting to reduce the number of fruits per image.
 

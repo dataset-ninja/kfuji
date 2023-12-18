@@ -1,6 +1,6 @@
 Dataset **KFuji RGB-DS** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](Set 'HIDE_DATASET=False' to generate download link)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/k/G/HP/ns3PRDIssQTlkJKxl82hhvWTYEoofDpYJajWUFgNIJKTox605Y4J06fQMSm8s1C7FL74YR9ZkHJVUpepVGpTtMtY26prcUU7YQwGqDWG0BtFFJIko9bbPlJhXXoU.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash

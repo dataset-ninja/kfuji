@@ -17,7 +17,7 @@ PROJECT_NAME: str = "KFuji RGB-DS"
 PROJECT_NAME_FULL: Optional[
     str
 ] = "KFuji RGB-DS Database: Fuji Apple Multi-Modal Images for Fruit Detection with Color, Depth and Range-Corrected IR Data"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -83,7 +83,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
 ]
 
 SLYTAGSPLIT: Optional[Dict[str, List[str]]] = {
-    "__PRETEXT__": "Additionally, every channel of the image is grouped by its ***im_id***. Explore image groups in supervisely."
+    "__PRETEXT__": "Additionally, every channel of the image is grouped by its ***im_id***. Explore image groups in supervisely"
 }
 TAGS: List[str] = None
 
