@@ -14,16 +14,21 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "KFuji RGB-DS"
-PROJECT_NAME_FULL: Optional[str] = "KFuji RGB-DS"
+PROJECT_NAME_FULL: Optional[
+    str
+] = "KFuji RGB-DS Database: Fuji Apple Multi-Modal Images for Fruit Detection with Color, Depth and Range-Corrected IR Data"
+HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = License.CC_BY_4_0()
+LICENSE: License = License.CC_BY_NC_SA_4_0(
+    source_url="https://zenodo.org/records/3715991#.YguSZnVBzmg"
+)
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Agricultural()]
 CATEGORY: Category = Category.Agriculture()
 
-CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
+CV_TASKS: List[CVTask] = [CVTask.ObjectDetection(), CVTask.MonocularDepthEstimation()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
 RELEASE_DATE: Optional[str] = "2020-05-11"  # e.g. "YYYY-MM-DD"
@@ -33,7 +38,7 @@ if RELEASE_DATE is None:
 HOMEPAGE_URL: str = "https://zenodo.org/record/3715991#.YguSZnVBzmg"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 393418
+PREVIEW_IMAGE_ID: int = 11602885
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/kfuji"
@@ -55,7 +60,9 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 PAPER: Optional[
     str
 ] = "https://www.sciencedirect.com/science/article/pii/S2352340919306432?via%3Dihub"
+
 CITATION_URL: Optional[str] = "https://zenodo.org/record/3715991/export/hx"
+
 AUTHORS: Optional[List[str]] = [
     "Jordi Gené-Mola",
     "Verónica Vilaplana",
@@ -64,6 +71,7 @@ AUTHORS: Optional[List[str]] = [
     "Javier Ruiz-Hidalgo",
     "Eduard Gregorio",
 ]
+AUTHORS_CONTACTS: Optional[List[str]] = ["gregorio@eagrof.udl.cat"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
     "Universitat de Lleida, Spain",
@@ -74,7 +82,9 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
     "https://www.upc.edu/ca",
 ]
 
-SLYTAGSPLIT: Optional[Dict[str, List[str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, List[str]]] = {
+    "__PRETEXT__": "Additionally, every channel of the image is grouped by its ***im_id***. Explore image groups in supervisely."
+}
 TAGS: List[str] = None
 
 ##################################
@@ -95,6 +105,7 @@ def get_settings():
 
     settings = {
         "project_name": PROJECT_NAME,
+        "hide_dataset": HIDE_DATASET,
         "license": LICENSE,
         "applications": APPLICATIONS,
         "category": CATEGORY,
@@ -116,6 +127,7 @@ def get_settings():
     settings["paper"] = PAPER
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
