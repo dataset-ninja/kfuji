@@ -85,7 +85,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
 SLYTAGSPLIT: Optional[Dict[str, List[str]]] = {
     "__PRETEXT__": "Additionally, every channel of the image is grouped by its ***im_id***. Explore image groups in supervisely"
 }
-TAGS: List[str] = None
+TAGS: List[str] = ['multi-view']
 
 ##################################
 ###### ? Checks. Do not edit #####
